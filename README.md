@@ -61,3 +61,7 @@ This tool has been split into two main scripts: `main.py` and `ssh.py`. Here’s
 **Running an SSH brute force attack**:
 ```bash
 python3 main.py
+```
+### ⚠️ Disclaimer
+
+This tool is intended only for educational purposes and should be used responsibly. Unauthorized use of this tool to gain access to systems without permission is illegal and unethical. Always ensure you have explicit permission before testing any system. The developers of this tool are not responsible for any misuse or damage caused by this tool.
