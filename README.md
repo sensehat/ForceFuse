@@ -12,10 +12,6 @@
 - [Disclaimer](#disclaimer)
 - [Technologies Used](#technologies-used)
 
-## 🎉 Introduction
-
-Ever wanted to test the strength of your SSH or FTP credentials? Well, now you can! This tool allows you to brute force SSH and FTP logins using customizable wordlists. Whether you're trying to enhance your cybersecurity skills or just experimenting in a controlled environment, this tool has got you covered!
-
 ## ✨ Features
 
 - **Brute Force SSH Logins**: Test multiple passwords against an SSH service.
