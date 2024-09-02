@@ -1,8 +1,6 @@
 # ForceFuse
-SSH and FTP brute forcing suite 
+ The SSH and FTP brute forcing suite 
 # 🛠️ SSH & FTP Brute Force Tool
-
-Welcome to the SSH & F
 
 ## 📜 Table of Contents
 
