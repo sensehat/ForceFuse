@@ -27,8 +27,8 @@ To get started with this tool, follow these steps:
     ```bash
     git clone https://github.com/sensehat/ForceFuse.git
     cd Project
-    chmod +x main.py
-    ./main.py
+    chmod +x forcefuse.py
+    ./forcefuse.py
     ```
 
 2. **Install the Required Python Packages**:
