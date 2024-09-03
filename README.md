@@ -26,7 +26,9 @@ To get started with this tool, follow these steps:
 1. **Clone the Repository**:
     ```bash
     git clone https://github.com/yourusername/bruteforce-tool.git
-    cd bruteforce-tool
+    cd Project
+    chmod +x main.py
+    ./main.py
     ```
 
 2. **Install the Required Python Packages**:
