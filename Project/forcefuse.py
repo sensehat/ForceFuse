@@ -16,47 +16,39 @@ def main():
 ---------------------------------------------------------
 
 Choose your target:
-
-[1] Crack SSH
-      - Bruteforce SSH logins using a customizable wordlist.
-      - Supports multiple threads for faster cracking.
-      
-[2] Crack FTP
-      - Bruteforce FTP logins with your chosen dictionary.
-      - Includes anonymous login bypass checks.
-
----------------------------------------------------------
-Select an option by entering the corresponding number:
 """)
     
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-t", type=str, dest="target", help="--target ip", default=None)
-    parser.add_argument("-w", type=str, dest="wordlist", help="--wordlist", default=None)
-    parser.add_argument("-u", type=str, dest="username", help='--username', default=None)
-    parser.add_argument("-c", type=str, dest="check", help="--check", default=None)
-    parser.add_argument("-a", type=str, dest="anon", help="--anonymous", default=None)
-    parser.add_argument("-o", type=str, dest="option", help="--option", default=None)
+    parser = argparse.ArgumentParser(description="A Python SSH and FTP brute force tool.")
+    
+    parser.add_argument("-t", "--target", type=str, help="Target IP address", required=True)
+    parser.add_argument("-u", "--username", type=str, help="Username for login", required=True)
+    parser.add_argument("-w", "--wordlist", type=str, help="Path to wordlist file", required=True)
+    parser.add_argument("-o", "--option", type=str, choices=['ssh', 'ftp'], help="Choose 'ssh' or 'ftp' brute force", required=True)
+    parser.add_argument("-c", "--check", type=str, help="Check if port 21 is open for FTP")
+    parser.add_argument("-a", "--anon", type=str, help="Check for anonymous login on FTP")
     
     args = parser.parse_args()
 
     target = args.target
     username = args.username
     wordlist = args.wordlist
+    option = args.option
     check = args.check
     anon = args.anon
-    option = args.option
 
-    if anon:
-        Anon_login(anon)
-    elif target and username and wordlist:
-        if option == '1':
-            ssh_brute(target, username, wordlist)
-        elif option == '2':
+    if option == 'ssh':
+        print("[*] Starting SSH brute force attack...")
+        ssh_brute(target, username, wordlist)
+    elif option == 'ftp':
+        if anon:
+            Anon_login(anon)
+        elif check:
+            Port_21(check)
+        else:
+            print("[*] Starting FTP brute force attack...")
             Brute_force(target, username, wordlist)
-    elif check:
-        Port_21(check)
     else:
-        print("[-] Not a valid option, please refer to -h for help")
+        print("[-] Invalid option, please choose 'ssh' or 'ftp'.")
 
 if __name__ == "__main__":
     main()
