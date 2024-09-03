@@ -25,7 +25,7 @@ To get started with this tool, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/bruteforce-tool.git
+    git clone https://github.com/sensehat/ForceFuse.git
     cd Project
     chmod +x main.py
     ./main.py
