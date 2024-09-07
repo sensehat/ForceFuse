@@ -45,7 +45,7 @@ To get started with this tool, follow these steps:
 
 1. **Run the Main Script**:
     ```bash
-    python3 main.py
+    python3 forcefuse.py
     ```
 
 2. **Follow the On-Screen Instructions**:
@@ -56,7 +56,7 @@ To get started with this tool, follow these steps:
 
 **Running an SSH brute force attack**:
 ```bash
-python3 main.py
+python3 forcefuse.py
 ```
 ### ⚠️ Disclaimer
 
