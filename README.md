@@ -41,8 +41,6 @@ To get started with this tool, follow these steps:
 
 ## 🕹️ Usage
 
-This tool has been split into two main scripts: `main.py` and `ssh.py`. Here’s how you can use them:
-
 ### **Running the Tool**
 
 1. **Run the Main Script**:
